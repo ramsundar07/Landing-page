@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Landing Page</title>
+	<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Changa:wght@200&family=Orbitron&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+	<style>
+	
+	body{
+		background: url("https://assets-global.website-files.com/5e39e095596498a8b9624af1/5f6e93d250a6d04f4eae9f02_Backgrounds-WFU-thumbnail-(size).jpg");
+		background-size: cover;
+	}
+	header{
+		margin:60px ;	
+		margin-left: 70px;
+		display: inline-block;
+	}
+	header a{
+		text-decoration: none;
+	}
+	.header-img{
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		position: relative;
+		display: inline-block;
+		top: 7px;
+	}
+	h1{
+		position: relative;
+		padding-left: 20px;
+		top: -5px;
+		display: inline-block;
+		font-family: 'ZCOOL KuaiLe', cursive;
+		background: -webkit-linear-gradient(45deg,#cc2b5e, #753a88);
+		 -webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+	}
+	nav{
+		position: relative;
+		float: right;
+		display: inline-block;
+		padding-left: 800px ;
+		padding-top: 20px;	
+	}
+	nav a{
+		font-family: 'Orbitron', sans-serif;
+		font-size: large;
+		color: white;
+		text-decoration: none;
+		position: relative;
+		padding:10px 20px 10px 20px;
+		top: 5px;
+		
+	}
+	nav a:hover{
+		border:1px solid darkgray;
+		background: #F433FF;
+		transition: background 1s;
+
+	}
+	hr{
+		height: 2px;
+		background: #F433FF ;
+	}
+	#sec1{
+		position: relative;
+		text-align: center;
+		color: white;
+	}
+	#heading{
+		position: relative;
+		font-family: 'Changa', sans-serif;
+		color: white;
+		font-size: xx-large;
+	}
+	input{
+		position: relative;
+		border-color: white;
+		color: white;
+		font-weight: bolder;
+		background: #E5E4E2;
+		border-radius: 15px 15px 15px 15px;
+		height: 25px;
+		width: 200px;
+		top: -35px;
+		backface-visibility: ;
+	}
+	button{
+		position: relative;
+		border: none;
+		color: white;
+		background-color: #F535AA;
+		padding: 10px;
+		top: -25px;
+		font-weight: bolder;
+		border-radius: 10px 10px 10px 10px;
+	}
+	button:hover{
+		color: white;
+		background: #CA226B;
+		font-weight: bolder;
+		transition:background 2s ;
+	}
+	#how-it-works{
+		text-align:center ;
+	}
+	#box-container{
+		position: relative;
+		padding-left: 100px;
+		margin: 40px;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+	}
+	#box-1 #box-2 #box-3{
+
+		display: inline-block;
+	}
+	#box3{
+		clear: float;
+	}
+	.desc{
+		font-family: 'Changa', sans-serif;
+		color: white;
+		font-size: large;
+		padding-left: 10%;
+		clear: left;
+		display: inline-block;
+
+	}
+	.desc h2{
+		position: relative;
+		top: 15px;
+	}
+		i{
+			position: relative;
+			top: -10px;
+		color: purple;
+	}
+	#pricing {
+		font-family: 'ZCOOL KuaiLe', cursive;
+		color: white;
+  		margin-top: 60px;
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: center;
+		}
+		.product {
+  		display: flex;
+  		flex-direction: column;
+		  align-items: center;
+		  text-align: center;
+		  width: calc(100% / 3);
+		  margin: 10px;
+		  border: 1px solid #000;
+		  border-radius: 3px;
+		}
+		.product > .level {
+		  background-color: #ddd;
+		  color: black;
+		  padding: 15px 0;
+		  width: 100%;
+		  text-transform: uppercase;
+		  font-weight: 700;
+		}
+	 #pricing img{
+	 	padding: 50px;
+	 	position: relative;
+	 	text-align: center;
+	 	width: 300px;
+	 	height: 300px;
+	 }
+	 .product > button {
+	 	width: 100px;
+	 	font-family: 'ZCOOL KuaiLe', cursive;
+  		border: 0;
+  		margin: 15px 0;
+ 		 background-color: #f1c40f;
+  		font-weight: 400;
+	}
+
+	.product > button:hover {
+		  background-color: orange;
+		  transition: background-color 1s;
+		}
+		footer {
+			color: white;
+		  margin-top: 30px;
+		  padding: 20px;
+		  font-weight: 800;
+		}
+		footer div{
+			font-family: 'ZCOOL KuaiLe', cursive;
+			text-align: center;
+		}
+
+		footer > ul {
+			color: white;
+			list-style: none;
+		  display: flex;
+		  justify-content: flex-end;
+		}
+
+		footer > ul > li {
+		  padding: 0 10px;
+		}
+
+		footer > span {
+		  margin-top: 5px;
+		  display: flex;
+		  justify-content: flex-end;
+		  font-size: 0.9em;
+		  
+		}
+
+
+</style>
+</head>
+<body>
+	<header>
+	<a href="#">
+		<img class="header-img" src="https://www.logolynx.com/images/logolynx/s_c7/c7bf10188923ece5de4ef9ee57f8144f.jpeg" alt="Logo">
+    </a>
+    <h1><strong>Naruto<strong></h1>
+    	<nav>
+    		<a href="#Features">Featuress</a>
+    		<a href="#how-it-works">Clips</a>
+    		<a href="#pricing">Buynow</a>
+    	</nav>
+    	<hr>
+    	 <section id="sec1">
+    		<h2 id="heading">Building a Better You<h2>
+    		<form>
+    			<input type="email" name="email" placeholder="Enter your email" required><br>
+    			<button type="button">Get Started ➜ </button>
+    		</form>
+    	</section>
+    	<section id="Features">
+    		
+		<div id="box-container">
+  		<div id="box-1">
+  			<i class="fa fa-3x fa-fire"></i>
+  			<div class="desc">
+          <h2>Premium Materials</h2>
+          <p>
+            Our Products are made in a premium and professional way. This
+            will increase the longevity of your purchase.
+          </p>
+        </div>
+  		</div>
+  		<div id="box-2">
+  			<i class="fa fa-3x fa-truck"></i>
+  			<div class="desc">
+          <h2>Fast Shipping</h2>
+          <p>
+            We make sure you recieve your product within 2-5 days
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+  		</div>
+  		<div id="box-3">
+  			<i class="fa fa-3x fa-battery-full"></i>
+  			<div class="desc">
+          <h2>Quality Assurance</h2>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults .
+          </p>
+       		 </div>
+  		</div>
+		</div>
+    	</section>
+    	 <section id="how-it-works">
+     <iframe width="600" height="406" src="https://www.youtube.com/embed/VUwbK0htfI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      ></iframe>
+    </section>
+    <section id="pricing">
+      <div class="product" id="t-shirt">
+        <div class="level">T-Shirts</div>
+        <img src="https://cdn.shopify.com/s/files/1/0231/7372/6244/products/naruto-graphic-black_grande.jpg?v=1588239413">
+        <h2>₹ 500</h2>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="product" id="poster">
+        <div class="level">Wall Posters</div>
+        <img src="https://m.media-amazon.com/images/I/71RMZQkpm8S._SL1500_.jpg">
+        <h2>₹300</h2>
+        
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="product" id="band">
+        <div class="level">Head Band</div>
+        <img src="https://m.media-amazon.com/images/I/61yoglLY1IL._SY355_.jpg">
+        <h2>₹200</h2>
+       
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+    <hr>
+    <footer>
+    	<div>
+    		<p>Follow us on</p>
+    		<a href="www.facebook.com"><i class="fab fa-facebook fa-3x"></i></a>
+    		</div>
+    	 <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2021, Naruto Merchandise</span>
+    </footer>
+<hr>
+ </body>
+</html>
