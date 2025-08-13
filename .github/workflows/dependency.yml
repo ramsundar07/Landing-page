@@ -1,5 +1,8 @@
 name: dependency
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   job1:
@@ -9,6 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Printing Todays Date 
         run: date "+%H:%M:%S   %d/%m/%y"
+
   job2:
     runs-on: windows-latest
     steps:
@@ -16,20 +20,21 @@ jobs:
         uses: actions/checkout@v2
       - name: Printing Todays Date 
         run: echo %date% %time%
+
   job3:
-    runs-on: macOs-latest
+    runs-on: macos-latest
     steps:
       - name: Checking Out
         uses: actions/checkout@v2
       - name: Printing Todays Date 
         run: date +"%Y-%m-%d %H:%M:%S"
+
   job4:
     runs-on: macos-latest
     needs: [job1, job2, job3]
     steps:
-      - name: Checking Out
-        uses: actions/checkout@v2
-      - name: Coool
-        run: say "Hello, world! This is a cool command."
-
-
+      - name: Knugen Greeter
+        uses: gustafedn/action_knugen@1.1
+        with:
+          message: You need some Knugen in your life
+          token: ${{ secrets.MY_PAT }}
