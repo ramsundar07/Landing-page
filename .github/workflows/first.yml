@@ -1,0 +1,10 @@
+name: first
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+       - name: first step
+         uses: actions/@checkoutV2
+       - name: second step
+         run: echo "Hello World"
