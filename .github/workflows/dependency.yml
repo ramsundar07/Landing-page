@@ -1,0 +1,38 @@
+name : dependency
+on : 
+  push: 
+    branches:
+      -main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking Out
+        uses: actions/checkout@v2
+      - name: Printing Todays Date 
+        run: date "+%H:%M:%S   %d/%m/%y"
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: Checking Out
+        uses: actions/checkout@v2
+      - name: Printing Todays Date 
+        run: echo %date% %time%
+  job3:
+    runs-on: macOs-latest
+    steps:
+      - name: Checking Out
+        uses: actions/checkout@v2
+      - name: Printing Todays Date 
+        run: date +"%Y-%m-%d %H:%M:%S"
+  job4:
+    runs-on: macos-latest
+    needs: [job1, job2, job3]
+    steps:
+      - name: Checking Out
+        uses: actions/checkout@v2
+      - name: Coool
+        run: say "Hello, world! This is a cool command."
+
+
