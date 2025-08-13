@@ -1,8 +1,5 @@
-name : dependency
-on : 
-  push: 
-    branches:
-      -main
+name: dependency
+on: push
 
 jobs:
   job1:
