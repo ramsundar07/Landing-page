@@ -12,7 +12,11 @@ jobs:
     runs-on: windows-latest
     steps:
        - name: first step
-         uses: actions/checkout@v2
+         uses: actions/checkout@v4
+         with:
+           repository: ramsundar07/Random-Colour-Generator
+           ref: main
+           path: ./colorGen
        - name: second step
          run: dir  
        - name: HTML Preview
