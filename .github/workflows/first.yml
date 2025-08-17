@@ -19,5 +19,5 @@ jobs:
          uses: pavi2410/html-preview-action@v4
          with:
           html_file: landing page.html
-          job_summary: HTML Is looking good
+          job_summary: TRUE
              
