@@ -20,7 +20,7 @@ jobs:
           echo "3. Job : $JOB_ENV_VAR"
           echo "4. Step : $STEP_ENV_VAR"
           echo "============================================"
-          echo "1. Repository : ${{env.GITHUB_REPOSITORY}}"
+          echo "1. Repository : ${{github.repository}}"
           echo "2. Workflow : ${{env.WORKFLOW_ENV_VAR}}"
           echo "3. Job : ${{env.JOB_ENV_VAR}}"
           echo "4. Step : ${{env.STEP_ENV_VAR}}"
