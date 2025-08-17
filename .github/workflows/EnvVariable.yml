@@ -1,0 +1,28 @@
+name: envVariable
+env:
+  WORKFLOW_ENV_VAR: "*****WORKFLOW****"
+  OVER_RIDE: 'workflow'
+on: [push]
+jobs:
+  ubuntu:
+    env:
+      JOB_ENV_VAR: "******UBUNTU******"
+      OVER_RIDE: 'job'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing all env variables
+        env:
+          STEP_ENV_VAR: "******STEP******"
+          OVER_RIDE: 'step'
+        run: |
+          echo "1. Repository : $GITHUB_REPOSITORY"
+          echo "2. Workflow : $WORKFLOW_ENV_VAR"
+          echo "3. Job : $JOB_ENV_VAR"
+          echo "4. Step : $STEP_ENV_VAR"
+          echo "============================================"
+          echo "1. Repository : ${{env.GITHUB_REPOSITORY}}"
+          echo "2. Workflow : ${{env.WORKFLOW_ENV_VAR}}"
+          echo "3. Job : ${{env.JOB_ENV_VAR}}"
+          echo "4. Step : ${{env.STEP_ENV_VAR}}"
+          
+    
