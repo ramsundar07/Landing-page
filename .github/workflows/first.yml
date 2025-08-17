@@ -14,4 +14,10 @@ jobs:
        - name: first step
          uses: actions/checkout@v2
        - name: second step
-         run: dir      
+         run: dir  
+       - name: HTML Preview
+         uses: pavi2410/html-preview-action@v4
+         with:
+          html_file: landing page.html
+          job_summary: HTML Is looking good
+             
