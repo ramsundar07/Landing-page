@@ -1,27 +1,44 @@
 name: first
+run-name: Ran by @${{ github.actor }}
 on: push
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-       - name: first step
-         uses: actions/checkout@v2
-       - name: second step
-         run: ls -a
+      - name: first step
+        uses: actions/checkout@v4
+      - name: second step
+        run: ls -a
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: landing page.html
+
   second-job:
     runs-on: windows-latest
     steps:
-       - name: first step
-         uses: actions/checkout@v4
-         with:
-           repository: ramsundar07/Random-Colour-Generator
-           ref: main
-           path: ./colorGen
-       - name: second step
-         run: dir  
-       - name: HTML Preview
-         uses: pavi2410/html-preview-action@v4
-         with:
+      - name: first step
+        uses: actions/checkout@v4
+        with:
+          repository: ramsundar07/Random-Colour-Generator
+          ref: main
+          path: ./colorGen
+      - name: second step
+        run: dir
+      - name: HTML Preview
+        uses: pavi2410/html-preview-action@v4
+        with:
           html_file: landing page.html
           job_summary: TRUE
-             
+
+  third-job:
+    runs-on: ubuntu-latest
+    needs: [first-job]
+    steps: 
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+      - name: show artifact
+        run: cat landing page.html
