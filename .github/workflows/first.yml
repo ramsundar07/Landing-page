@@ -41,4 +41,5 @@ jobs:
         with:
           name: build-artifact
       - name: show artifact
-        run: cat landing page.html
+        run: cat "landing page.html"
+
